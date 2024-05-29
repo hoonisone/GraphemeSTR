@@ -11,3 +11,5 @@ works/rec_grapheme_10000_horizontal_G/trained_model/best_accuracy.pdparams filte
 works/rec_grapheme_10000_horizontal_C+FML/trained_model/best_accuracy.pdparams filter=lfs diff=lfs merge=lfs -text
 works/rec_grapheme_10000_horizontal_C+FM/trained_model/best_accuracy.pdparams filter=lfs diff=lfs merge=lfs -text
 works/rec_grapheme_10000_horizontal_C+F/trained_model/best_accuracy.pdparams filter=lfs diff=lfs merge=lfs -text
+/works/*/trained_model/*.pdparams filter=lfs diff=lfs merge=lfs -text
+models/korean_PP-OCRv3_rec/pretrained_model/pretrained.pdparams filter=lfs diff=lfs merge=lfs -text

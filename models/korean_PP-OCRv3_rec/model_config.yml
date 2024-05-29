@@ -1,0 +1,8 @@
+task: 
+- STR
+inference_model: inference_model/inference.pdmodel
+inference_model_dir: inference_model
+inference_model_weight: inference_model/inference.pdiparams
+pretrained_model_dir: pretrained_model/
+pretrained_model_weight: pretrained_model/pretrained.pdparams
+train_config: pretrained_model/config.yml
