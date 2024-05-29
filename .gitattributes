@@ -1,0 +1,13 @@
+*.zip filter=lfs diff=lfs merge=lfs -text
+works filter=lfs diff=lfs merge=lfs -text
+works/rec_grapheme_10000_horizontal_G filter=lfs diff=lfs merge=lfs -text
+works/rec_grapheme_10000_horizontal_C filter=lfs diff=lfs merge=lfs -text
+works/rec_grapheme_10000_horizontal_C+F filter=lfs diff=lfs merge=lfs -text
+works/rec_grapheme_10000_horizontal_C+FM filter=lfs diff=lfs merge=lfs -text
+works/rec_grapheme_10000_horizontal_C+FML filter=lfs diff=lfs merge=lfs -text
+*.pdparams filter=lfs diff=lfs merge=lfs -text
+works/rec_grapheme_10000_horizontal_C/trained_model/best_accuracy.pdparams filter=lfs diff=lfs merge=lfs -text
+works/rec_grapheme_10000_horizontal_G/trained_model/best_accuracy.pdparams filter=lfs diff=lfs merge=lfs -text
+works/rec_grapheme_10000_horizontal_C+FML/trained_model/best_accuracy.pdparams filter=lfs diff=lfs merge=lfs -text
+works/rec_grapheme_10000_horizontal_C+FM/trained_model/best_accuracy.pdparams filter=lfs diff=lfs merge=lfs -text
+works/rec_grapheme_10000_horizontal_C+F/trained_model/best_accuracy.pdparams filter=lfs diff=lfs merge=lfs -text
