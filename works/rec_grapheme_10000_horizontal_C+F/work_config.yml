@@ -1,0 +1,10 @@
+export_dir: inference_models
+inference_result_dir: inference_result
+labelsets:
+- aihub_rec_10000_horizontal_8:1:1
+model: korean_PP-OCRv3_rec
+report_file: report.csv
+task:
+- STR
+train_config: train_config.yml
+trained_model_dir: trained_model

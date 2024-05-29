@@ -1,0 +1,139 @@
+Architecture:
+  Backbone:
+    last_conv_stride:
+    - 1
+    - 2
+    last_pool_kernel_size:
+    - 2
+    - 2
+    last_pool_type: avg
+    name: MobileNetV1Enhance
+    scale: 0.5
+  Head:
+    head_list:
+    - CTCHead:
+        Head:
+          fc_decay: 1.0e-05
+        Neck:
+          depth: 2
+          dims: 64
+          hidden_dims: 120
+          name: svtr
+          use_guide: false
+    - SARHead:
+        enc_dim: 512
+        max_text_length: 25
+    name: MultiHead_Grapheme
+  Transform: null
+  algorithm: SVTR_LCNet
+  model_type: rec
+Eval:
+  dataset:
+    data_dir: ./datasets
+    label_file_list:
+    - labelsets/aihub_rec_10000_horizontal_8:1:1/eval_label.txt
+    name: SimpleDataSet
+    transforms:
+    - DecodeImage:
+        channel_first: false
+        img_mode: BGR
+    - ExtractGrapheme: null
+    - MultiLabelEncode_Grapheme: null
+    - RecResizeImg:
+        image_shape:
+        - 3
+        - 48
+        - 320
+  loader:
+    batch_size_per_card: 512
+    drop_last: false
+    num_workers: 2
+    shuffle: false
+Global:
+  cal_metric_during_train: true
+  character_dict_path:
+    first: ./code/PaddleOCR/ppocr/utils/dict/korean_dict_grapheme_first.txt
+    second: ./code/PaddleOCR/ppocr/utils/dict/korean_dict_grapheme_second.txt
+    third: ./code/PaddleOCR/ppocr/utils/dict/korean_dict_grapheme_third.txt
+    character: ./code/PaddleOCR/ppocr/utils/dict/korean_dict_grapheme_origin.txt
+  checkpoints: /home/models/korean_PP-OCRv3_rec/pretrained_model/pretrained
+  debug: false
+  distributed: true
+  epoch_num: 300
+  eval_batch_step:
+  - 0
+  - 62
+  infer_img: doc/imgs_words/ch/word_1.jpg
+  infer_mode: false
+  log_smooth_window: 20
+  max_text_length: 25
+  pretrained_model: /home/det/model/korean_PP-OCRv3_rec/pretrained/model/latest
+  print_batch_step: 10
+  save_epoch_step: 1
+  save_inference_dir: null
+  save_model_dir: works/rec_grapheme_10000_horizontal_C/trained_model
+  save_res_path: ./output/rec/predicts_ppocrv3_korean.txt
+  use_gpu: true
+  use_space_char: true
+  use_visualdl: false
+  use_grapheme: true
+  handling_grapheme:
+  - character
+  infer_type: character
+Infer:
+  data_dir: None
+  label_file_list: None
+Loss:
+  loss_config_list:
+  - CTCLoss: null
+  - SARLoss: null
+  name: MultiLoss_Grapheme
+Metric:
+  ignore_space: false
+  main_indicator: character_acc
+  name: RecMetric_Grapheme
+Optimizer:
+  beta1: 0.9
+  beta2: 0.999
+  lr:
+    learning_rate: 0.001
+    name: Cosine
+    warmup_epoch: 5
+  name: Adam
+  regularizer:
+    factor: 3.0e-05
+    name: L2
+PostProcess:
+  name: CTCLabelDecode_Grapheme
+Train:
+  dataset:
+    data_dir: ./datasets
+    ext_op_transform_idx: 1
+    label_file_list:
+    - labelsets/aihub_rec_10000_horizontal_8:1:1/train_label.txt
+    name: SimpleDataSet
+    transforms:
+    - DecodeImage:
+        channel_first: false
+        img_mode: BGR
+    - RecConAug:
+        ext_data_num: 2
+        image_shape:
+        - 48
+        - 320
+        - 3
+        prob: 0.5
+    - ExtractGrapheme: null
+    - RecAug: null
+    - MultiLabelEncode_Grapheme: null
+    - RecResizeImg:
+        image_shape:
+        - 3
+        - 48
+        - 320
+  loader:
+    batch_size_per_card: 128
+    drop_last: true
+    num_workers: 8
+    shuffle: true
+profiler_options: null
