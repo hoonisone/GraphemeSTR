@@ -1,0 +1,100 @@
+SUPPORTED:
+
+dataset_dir: ./datasets/ai_hub_korean_det
+
+x_ext: jpg
+y_ext: json
+
+checklist:
+    all: null
+    train1/source: 
+        all: null
+        간판:
+            all: null
+            가로형간판: false
+            돌출간판: false
+            세로형간판: false
+            실내간판: false
+            실내안내판: false
+            지주이용간판: false
+            창문이용광고물: false
+            현수막: false
+        책표지: 
+            all: true
+            기타: false
+            종교: false
+            총류: false
+    val1/source: 
+        all: null
+        간판:
+            all: null
+            가로형간판: false
+            돌출간판: false
+            세로형간판: false
+            실내간판: false
+            실내안내판: false
+            지주이용간판: false
+            창문이용광고물: false
+            현수막: false
+        책표지: 
+            all: true
+            기타: false
+            종교: false
+            총류: false
+    train2/source: 
+        all: null
+        간판:
+            all: null
+            가로형간판/가로형간판1: false
+            가로형간판/가로형간판2: false
+            가로형간판/가로형간판3: false
+            가로형간판/가로형간판4: false
+            가로형간판/가로형간판5: false
+            돌출간판/돌출간판1: false
+            돌출간판/돌출간판2: false
+            세로형간판: false
+            실내간판/실내간판1: false
+            실내간판/실내간판2: false
+            실내안내판/실내안내판1: false
+            실내안내판/실내안내판2: false
+            지주이용간판: false
+            창문이용광고물: false
+            현수막: false
+        책표지: 
+            all: true
+            총류: false
+            철학: false
+            종교: false
+            사회과학: false
+            자연과학: false
+            기술과학: false
+            예술: false
+            언어: false
+            문학: false
+            역사: false
+            기타: false
+    val2/source: 
+        all: null
+        간판:
+            all: null
+            가로형간판: false
+            돌출간판: false
+            세로형간판: false
+            실내간판: false
+            실내안내판: false
+            지주이용간판: false
+            창문이용광고물: false
+            현수막: false
+        책표지: 
+            all: true
+            총류: false
+            철학: false
+            종교: false
+            사회과학: false
+            자연과학: false
+            기술과학: false
+            예술: false
+            언어: false
+            문학: false
+            역사: false
+            기타: false

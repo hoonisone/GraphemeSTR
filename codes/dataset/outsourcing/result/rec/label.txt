@@ -1,0 +1,31 @@
+result\rec\1\1.png	나주곰탕 주차장
+result\rec\1\2.png	T.374-8088
+result\rec\1\3.png	당신의 봄
+result\rec\1\4.png	의원
+result\rec\1\5.png	2F
+result\rec\1\6.png	P
+result\rec\1\7.png	주차장
+result\rec\1\8.png	(한자)
+result\rec\1\9.png	계계속속
+result\rec\1\10.png	몸이야 필라테스
+result\rec\1\11.png	951-7756
+result\rec\1\12.png	본 치과의원 5F
+result\rec\1\13.png	KFC
+result\rec\1\14.png	R
+result\rec\1\15.png	두끼
+result\rec\1\16.png	떡볶이로 한끼! 볶음밥으로 두끼!
+result\rec\1\17.png	2F
+result\rec\1\18.png	미래키움
+result\rec\1\19.png	과학 전문학원
+result\rec\1\20.png	4F
+result\rec\1\21.png	바덴뷰티
+result\rec\1\22.png	네일 · 속눈썹 · 클리닉
+result\rec\1\23.png	레푸스
+result\rec\1\24.png	문제성 발관리 전문점
+result\rec\1\25.png	수강/예약문의
+result\rec\1\26.png	959-8999
+result\rec\1\27.png	수완점
+result\rec\1\28.png	3F
+result\rec\1\29.png	AI랩코딩학원
+result\rec\1\30.png	유·초·중·고 코딩전문
+result\rec\1\31.png	951-7797
